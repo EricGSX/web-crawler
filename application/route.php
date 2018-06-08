@@ -9,13 +9,18 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-return [
-    '__pattern__' => [
-        'name' => '\w+',
-    ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
-    ],
+use think\Route;
+// return [
+//     '__pattern__' => [
+//         'name' => '\w+',
+//     ],
+//     '[hello]'     => [
+//         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
+//         ':name' => ['index/hello', ['method' => 'post']],
+//     ],
 
-];
+// ];
+// 注册路由到index模块的News控制器的read操作
+Route::any('/test','index/index/test');
+
+
